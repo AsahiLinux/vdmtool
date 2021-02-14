@@ -4,13 +4,13 @@ This is a simple tool for sending and receiving USB-PD VDM messages using a FUSB
 
 USB-PD VDM documentation is [here](https://github.com/AsahiLinux/docs/wiki/Hardware:USB-PD)
 
-# Example Usage
-
+# Wiring
+#### Bare FUSB
 You can use a breakout board or a bare [FUSB302](https://www.onsemi.com/pub/Collateral/FUSB302-D.PDF). You need to wire it as follows:
 
 * 1 CC2 → Type-C CC2 (B5) - ONLY wire this to a Type-C *socket* used with a cable. Otherwise leave open.
 * 2 VBUS → Arduino D4, Type-C VBUS (A4/A9/B4/B9)
-* 3 VDD → Arduino 3.3V
+* 3 VDD → Arduino 3V3
 * 4 VDD ↑
 * 5 INT_N → Arduino D12
 * 6 SCL → Arduino A5
@@ -24,6 +24,21 @@ You can use a breakout board or a bare [FUSB302](https://www.onsemi.com/pub/Coll
 * 14 CC2 - See pin 1 ↑
 
 You can get away without decoupling and with only connecting one of the duplicated pins. The exposed pad is NC.
+
+#### Reclaimer Labs Board
+Alternatively, you can also use the [Relaimer Labs](https://www.tindie.com/products/reclaimerlabs/usb-c-power-delivery-phy-breakout-board/) board.
+
+* 1 VBUS → Arduino D4
+* 2 VPU → Arduino 3V3
+* 3 VDD → Arduino 3V3
+* 4 GND → Arduino GND
+* 5 INT_N → Arduino D12
+* 6 SCL → Arduino A5
+* 7 SDA → Arduino A4
+* 8 GND → Arduino GND
+
+# Cabling 
+Not all USB-C Cables are alike. For this you will need a SuperSpeed or Thunderbolt cable. These may or may not be marked as such. (White Apple cables don't work for example). If you get no output from a vdm command but output otherwise looks ok: try another cable.
 
 # Interface
 
