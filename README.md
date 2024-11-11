@@ -28,7 +28,9 @@ You can get away without decoupling and with only connecting one of the duplicat
 #### Reclaimer Labs Board
 Alternatively, you can also use the [Relaimer Labs](https://www.tindie.com/products/reclaimerlabs/usb-c-power-delivery-phy-breakout-board/) board.
 
-* 1 VBUS → Arduino D4
+**NOTE: SBU1 and SBU2 aren't connected on the USB-C connector**
+
+* 1 VBUS → Arduino D4 (**not VBUS_A**)
 * 2 VPU → Arduino 3V3
 * 3 VDD → Arduino 3V3
 * 4 GND → Arduino GND
