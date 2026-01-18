@@ -2,7 +2,7 @@
 
 This is a simple tool for sending and receiving USB-PD VDM messages using a FUSB302, based on [usb-c-arduino](https://github.com/graycatlabs/usb-c-arduino).
 
-USB-PD VDM documentation is [here](https://github.com/AsahiLinux/docs/wiki/Hardware:USB-PD)
+USB-PD VDM documentation is [here](https://asahilinux.org/docs/hw/soc/usb-pd/)
 
 # Wiring
 #### Bare FUSB

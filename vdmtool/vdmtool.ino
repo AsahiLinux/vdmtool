@@ -320,6 +320,8 @@ void evt_packet(void) {
   handle_msg(sop, hdr, msg);
 }
 
+void vdm_fun();
+
 void evt_sent(void) {
   switch (st) {
     case STATE_DFP_VBUS_ON:
